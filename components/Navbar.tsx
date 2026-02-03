@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="/logo.png" alt="Harpers® Logo" className="h-10 w-auto object-contain" />
+          <img src="/logo-green.png" alt="Harpers® Logo" className="h-12 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}
@@ -40,9 +40,8 @@ const Navbar: React.FC = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm font-semibold tracking-wide transition-colors ${
-                location.pathname === link.path ? 'text-emerald-600' : 'text-slate-700 hover:text-emerald-600'
-              }`}
+              className={`text-sm font-semibold tracking-wide transition-colors ${location.pathname === link.path ? 'text-emerald-600' : 'text-slate-700 hover:text-emerald-600'
+                }`}
             >
               {link.name}
             </Link>

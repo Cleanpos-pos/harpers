@@ -9,35 +9,35 @@ export const SERVICES: Service[] = [
     title: 'Dry Cleaning',
     description: 'Expert cleaning for your most delicate garments using eco-friendly solvents.',
     icon: 'Shirt',
-    image: '/assets/dry-cleaning.png'
+    image: '/assets/v1-dry-cleaning.png'
   },
   {
     id: 'laundry',
     title: 'Laundry & Ironing',
     description: 'Freshly laundered shirts and bedding, pressed to perfection.',
     icon: 'Wind',
-    image: '/assets/laundry.png'
+    image: '/assets/v1-laundry.png'
   },
   {
     id: 'alterations',
     title: 'Repairs & Alterations',
     description: 'Professional seamstresses to ensure your clothes fit perfectly.',
     icon: 'Scissors',
-    image: '/assets/alterations.png'
+    image: '/assets/v1-alterations.png'
   },
   {
     id: 'household',
     title: 'Household Items',
     description: 'Specialist care for curtains, rugs, and oversized duvets.',
     icon: 'Home',
-    image: '/assets/household.png'
+    image: '/assets/v1-household.png'
   },
   {
     id: 'commercial',
     title: 'Commercial/B2B',
     description: 'High-volume laundry solutions for local businesses and hotels.',
     icon: 'Building2',
-    image: '/assets/commercial.png'
+    image: '/assets/v1-commercial.png'
   }
 ];
 

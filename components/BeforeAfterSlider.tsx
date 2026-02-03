@@ -23,7 +23,7 @@ const BeforeAfterSlider: React.FC = () => {
     >
       {/* After Image */}
       <img
-        src="/assets/after.png"
+        src="/assets/v1-after.png"
         alt="After"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -34,10 +34,10 @@ const BeforeAfterSlider: React.FC = () => {
         style={{ width: `${sliderPos}%` }}
       >
         <img
-          src="/assets/before.png"
+          src="/assets/v1-before.png"
           alt="Before"
           className="absolute inset-0 h-full object-cover max-w-none"
-          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100vw' }}
+          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%' }}
         />
         <div className="absolute inset-0 bg-slate-900/10 backdrop-grayscale-[0.5]" />
       </div>
