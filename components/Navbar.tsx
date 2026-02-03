@@ -30,9 +30,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2">
-          <Leaf className="text-emerald-600 w-8 h-8" />
-          <span className={`text-2xl font-bold font-serif ${scrolled ? 'text-slate-900' : 'text-slate-900'}`}>Harpers®</span>
+        <Link to="/" className="flex items-center">
+          <img src="/logo.png" alt="Harpers® Logo" className="h-10 w-auto object-contain" />
         </Link>
 
         {/* Desktop Nav */}
