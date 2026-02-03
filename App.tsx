@@ -7,6 +7,7 @@ import OfferBanner from './components/OfferBanner';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
 import BookNow from './pages/BookNow';
+import CookieConsent from './components/CookieConsent';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -56,6 +57,7 @@ const App: React.FC = () => {
           <Calendar size={24} />
           <span className="hidden md:block font-bold">Schedule Pickup</span>
         </Link>
+        <CookieConsent />
       </div>
     </Router>
   );
