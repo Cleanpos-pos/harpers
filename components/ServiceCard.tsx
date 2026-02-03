@@ -25,6 +25,11 @@ const ServiceCard: React.FC<Props> = ({ service }) => {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
         />
         <div className="absolute inset-0 bg-emerald-900/10 group-hover:bg-emerald-900/0 transition-colors" />
+
+        {/* Watermark */}
+        <div className="absolute bottom-4 right-4 opacity-20 pointer-events-none select-none">
+          <span className="text-sm font-bold tracking-widest text-white uppercase italic">@harpers</span>
+        </div>
       </div>
       <div className="p-8 flex flex-col flex-grow">
         <div className="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">

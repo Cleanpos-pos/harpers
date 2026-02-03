@@ -23,7 +23,7 @@ const BeforeAfterSlider: React.FC = () => {
     >
       {/* After Image */}
       <img
-        src="https://picsum.photos/seed/after-clean/800/600"
+        src="/assets/after.png"
         alt="After"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -34,12 +34,19 @@ const BeforeAfterSlider: React.FC = () => {
         style={{ width: `${sliderPos}%` }}
       >
         <img
-          src="https://picsum.photos/seed/before-clean/800/600"
+          src="/assets/before.png"
           alt="Before"
           className="absolute inset-0 w-full h-full object-cover max-w-none"
           style={{ width: containerRef.current?.offsetWidth }}
         />
         <div className="absolute inset-0 bg-slate-900/10 backdrop-grayscale-[0.5]" />
+      </div>
+
+      {/* Watermark Overlay */}
+      <div className="absolute inset-0 pointer-events-none z-10">
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 opacity-20 select-none">
+          <span className="text-4xl md:text-6xl font-bold tracking-[0.2em] text-white uppercase italic">@harpers</span>
+        </div>
       </div>
 
       {/* Slider Bar */}
