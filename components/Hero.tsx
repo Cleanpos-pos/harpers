@@ -18,6 +18,14 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="mb-8"
+          >
+            <img src="/logo-nobg.png" alt="Harpers® Logo" className="h-24 w-auto object-contain" />
+          </motion.div>
           <div className="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 px-4 py-2 rounded-full text-sm font-bold mb-6">
             <Sparkles className="w-4 h-4" />
             <span>Local Independent Dry Cleaners & Launderers</span>

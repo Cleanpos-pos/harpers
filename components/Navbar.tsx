@@ -31,7 +31,8 @@ const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <img src="/logo-nobg.png" alt="Harpers® Logo" className="h-12 w-auto object-contain" />
+          {/* Logo removed from header as per request */}
+          <span className="text-2xl font-serif font-bold text-emerald-900 tracking-tight italic">Harpers®</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -64,9 +65,10 @@ const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.3 }}
             className="md:hidden bg-white border-t border-slate-100 overflow-hidden"
           >
             <div className="flex flex-col p-6 space-y-4">
