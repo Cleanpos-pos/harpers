@@ -48,7 +48,7 @@ export const LOCATIONS: LocationInfo[] = [
     postcode: 'B72 1YJ',
     phone: '0121 384 5152',
     hours: 'Mon-Sat: 8:00 AM - 5:30 PM',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.347526734185!2d-1.8211!3d52.544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870ba9959e6632d%3A0xe67c050c92d59648!2s390%20Birmingham%20Rd%2C%20Wylde%20Green%2C%20Sutton%20Coldfield%20B72%201YJ!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk'
+    mapUrl: 'https://maps.google.com/maps?q=390%20Birmingham%20Rd,%20Wylde%20Green,%20B72%201YJ&t=&z=15&ie=UTF8&iwloc=&output=embed'
   },
   {
     name: 'Mere Green',
@@ -56,7 +56,7 @@ export const LOCATIONS: LocationInfo[] = [
     postcode: 'B74 2UG',
     phone: '0121 308 3939',
     hours: 'Mon-Sat: 8:30 AM - 5:00 PM',
-    mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2424.4!2d-1.84!3d52.58!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bb8e99999999%3A0x9999999999999999!2s286A%20Lichfield%20Rd%2C%20Mere%20Green%2C%20Sutton%20Coldfield%20B74%202UG!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk'
+    mapUrl: 'https://maps.google.com/maps?q=286A%20Lichfield%20Rd,%20Mere%20Green,%20B74%202UG&t=&z=15&ie=UTF8&iwloc=&output=embed'
   }
 ];
 

@@ -36,8 +36,8 @@ const BeforeAfterSlider: React.FC = () => {
         <img
           src="/assets/before.png"
           alt="Before"
-          className="absolute inset-0 w-full h-full object-cover max-w-none"
-          style={{ width: containerRef.current?.offsetWidth }}
+          className="absolute inset-0 h-full object-cover max-w-none"
+          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100vw' }}
         />
         <div className="absolute inset-0 bg-slate-900/10 backdrop-grayscale-[0.5]" />
       </div>
