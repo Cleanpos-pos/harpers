@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Hero from '../components/Hero';
-import ServiceCard from '../components/ServiceCard';
+import ServiceTabs from '../components/ServiceTabs';
 import BeforeAfterSlider from '../components/BeforeAfterSlider';
-import { SERVICES, TESTIMONIALS } from '../constants';
+import { TESTIMONIALS } from '../constants';
 import { Leaf, Award, ShieldCheck, Star, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -13,21 +13,21 @@ const Home: React.FC = () => {
     <div className="overflow-hidden">
       <Hero />
 
-      {/* Services Grid Section */}
-      <section className="py-24 bg-white">
+      {/* Services Tabs Section */}
+      <section className="py-32 bg-slate-50">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 text-slate-900">Expert Care for Every Garment</h2>
-            <p className="text-lg text-slate-600">From everyday essentials to your most precious items, we provide specialized care using eco-friendly processes.</p>
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 text-slate-900 leading-tight">Expert Care for <span className="text-emerald-600">Every</span> Garment</h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              From everyday essentials to your most precious items, we provide specialized care using award-winning processes.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES.map((s) => (
-              <ServiceCard key={s.id} service={s} />
-            ))}
-          </div>
-          <div className="mt-16 text-center">
-            <Link to="/services" className="inline-flex items-center text-emerald-600 font-bold text-lg hover:underline">
-              View All Services & Pricing <ArrowRight className="ml-2 w-5 h-5" />
+
+          <ServiceTabs />
+
+          <div className="mt-20 text-center">
+            <Link to="/services" className="inline-flex items-center bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-all shadow-sm">
+              Explore All Services & Pricing <ArrowRight className="ml-2 w-5 h-5 text-emerald-600" />
             </Link>
           </div>
         </div>

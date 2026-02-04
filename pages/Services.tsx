@@ -1,64 +1,14 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import {
-    Hotel,
-    Shirt,
-    ChefHat,
-    Bed,
-    Utensils,
-    Calendar,
     Trophy,
-    CheckCircle2,
-    Clock,
     ShieldCheck,
+    Clock,
+    CheckCircle2,
     MapPin,
     Star
 } from 'lucide-react';
-
-const services = [
-    {
-        title: "Hotel Guest Valet",
-        description: "Premium same-day dry cleaning and laundry services for hotel guests.",
-        icon: <Hotel className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1541480601022-2308c0f02487?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Employee & Uniform Care",
-        description: "Expert cleaning for staff attire to ensure your team always looks their best.",
-        icon: <Shirt className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Professional Chef Wear",
-        description: "Specialist cleaning and flexible rental options for culinary environments.",
-        icon: <ChefHat className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Full Linen Management",
-        description: "Comprehensive rental and laundering of high-quality bed and bath linens.",
-        icon: <Bed className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Restaurant & F&B Services",
-        description: "Dedicated linen rental and cleaning for prestigious dining rooms.",
-        icon: <Utensils className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1550966841-3ee71031f38b?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Event & Venue Solutions",
-        description: "Scalable cleaning services for large-scale events and household requirements.",
-        icon: <Calendar className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800"
-    },
-    {
-        title: "Elite Sports Laundry",
-        description: "Specialists in team kit and technical wear cleaning for professional sporting organisations.",
-        icon: <Trophy className="w-8 h-8" />,
-        image: "https://images.unsplash.com/photo-1526676023601-d75a706bd5d0?auto=format&fit=crop&q=80&w=800"
-    }
-];
+import ServiceTabs from '../components/ServiceTabs';
 
 const partners = [
     "The Grand Hotel", "The Belfry Hotel & Resort", "Birmingham Hilton Metropole",
@@ -73,7 +23,6 @@ const Services: React.FC = () => {
     useEffect(() => {
         document.title = "Professional Hospitality & Commercial Laundry Birmingham | Harpers®";
 
-        // Update meta description
         let metaDescription = document.querySelector('meta[name="description"]') as HTMLMetaElement;
         if (!metaDescription) {
             metaDescription = document.createElement('meta') as HTMLMetaElement;
@@ -82,7 +31,6 @@ const Services: React.FC = () => {
         }
         metaDescription.setAttribute("content", "Birmingham's leading hospitality laundry services. Trusted by The Grand, The Belfry, and ECB. Premium 5-star linen management, hotel guest valet, and elite sports laundry.");
 
-        // Add Schema.org JSON-LD
         const script = document.createElement('script');
         script.type = 'application/ld+json';
         script.innerHTML = JSON.stringify({
@@ -115,11 +63,6 @@ const Services: React.FC = () => {
 
         return () => {
             document.head.removeChild(script);
-            // Optionally, reset title and meta description or remove meta tag
-            document.title = "Harpers Laundry"; // Or a default title
-            if (metaDescription) {
-                metaDescription.setAttribute("content", ""); // Or a default description
-            }
         };
     }, []);
 
@@ -172,41 +115,16 @@ const Services: React.FC = () => {
                 </div>
             </section>
 
-            {/* Core Services Grid */}
-            <section className="py-24">
+            {/* Services Tabs Section */}
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">Our Core Services</h2>
-                        <div className="w-24 h-1 bg-emerald-600 mx-auto rounded-full" />
+                        <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-4">Our Services</h2>
+                        <div className="w-24 h-1 bg-emerald-600 mx-auto rounded-full mb-8" />
+                        <p className="text-xl text-slate-600 max-w-2xl mx-auto">From everyday garments to specialist hospitality contracts, we provide the highest standards of care.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {services.map((service, index) => (
-                            <motion.div
-                                key={service.title}
-                                whileHover={{ y: -10 }}
-                                className="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200 border border-slate-100 group"
-                            >
-                                <div className="h-48 overflow-hidden relative">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
-                                    <div className="absolute bottom-4 left-6 text-white bg-emerald-600 p-3 rounded-2xl shadow-lg -mb-0 transition-all">
-                                        {service.icon}
-                                    </div>
-                                </div>
-                                <div className="p-8 pt-10">
-                                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{service.title}</h3>
-                                    <p className="text-slate-600 leading-relaxed">
-                                        {service.description}
-                                    </p>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
+                    <ServiceTabs />
                 </div>
             </section>
 
