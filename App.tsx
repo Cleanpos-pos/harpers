@@ -7,6 +7,7 @@ import OfferBanner from './components/OfferBanner';
 import Home from './pages/Home';
 import Locations from './pages/Locations';
 import BookNow from './pages/BookNow';
+import Services from './pages/Services';
 import CookieConsent from './components/CookieConsent';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -39,7 +40,7 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/services" element={<UnderConstruction title="Our Detailed Services" />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/eco" element={<UnderConstruction title="Sustainability at Harpers" />} />
             <Route path="/pricing" element={<UnderConstruction title="Pricing Guide" />} />
             <Route path="/locations" element={<Locations />} />
