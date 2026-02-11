@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
               Schedule Pickup
             </Link>
             <Link
-              to="/services"
+              to="/pricing"
               className="w-full sm:w-auto px-8 py-4 rounded-full text-lg font-bold text-slate-700 hover:text-emerald-600 transition-colors border border-slate-200 hover:border-emerald-200 flex items-center justify-center"
             >
               View Pricing
