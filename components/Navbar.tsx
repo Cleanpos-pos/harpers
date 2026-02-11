@@ -31,7 +31,6 @@ const Navbar: React.FC = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center space-x-3 group">
-          <img src="/logo-nobg.png" alt="Harpers® Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" />
           <span className="text-xl font-serif font-bold text-emerald-900 tracking-tight italic">Harpers®</span>
         </Link>
 
