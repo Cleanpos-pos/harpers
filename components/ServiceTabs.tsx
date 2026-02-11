@@ -42,7 +42,7 @@ const categories: Category[] = [
         icon: <Shirt className="w-6 h-6" />,
         color: 'emerald',
         description: 'Professional care for your regular wardrobe and urgent items.',
-        image: 'https://images.unsplash.com/photo-1545173168-9f1947eebb9f?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=1200',
         services: [
             { name: 'Dry Cleaning', description: 'Everyday garments, specialist fabrics & high value designer items', icon: <Shirt className="w-5 h-5 text-emerald-500" /> },
             { name: 'Laundry Services', description: 'Including service washes & bulk laundry', icon: <Wind className="w-5 h-5 text-emerald-500" /> },
@@ -70,7 +70,7 @@ const categories: Category[] = [
         icon: <Sparkles className="w-6 h-6" />,
         color: 'indigo',
         description: 'Bespoke treatments for delicate and complex items.',
-        image: 'https://images.unsplash.com/photo-1594465919760-441fe5908ab0?auto=format&fit=crop&q=80&w=800',
+        image: 'https://images.unsplash.com/photo-1594465919760-441fe5908ab0?auto=format&fit=crop&q=80&w=1200',
         services: [
             { name: 'Wedding Dress Cleaning', description: 'Specialist bridal care and preservation', icon: <Heart className="w-5 h-5 text-indigo-500" /> },
             { name: 'Suede & Leather Cleaning', description: 'Specialist treatment for natural skins', icon: <ShieldCheck className="w-5 h-5 text-indigo-500" /> },
@@ -162,9 +162,9 @@ const ServiceTabs: React.FC = () => {
                                     className="group flex items-start space-x-4 p-4 rounded-xl hover:bg-white hover:shadow-lg hover:shadow-slate-100 transition-all border border-transparent hover:border-slate-100"
                                 >
                                     <div className={`p-3 rounded-xl transition-colors ${activeCategory.color === 'emerald' ? 'bg-emerald-50 group-hover:bg-emerald-100' :
-                                            activeCategory.color === 'sky' ? 'bg-sky-50 group-hover:bg-sky-100' :
-                                                activeCategory.color === 'indigo' ? 'bg-indigo-50 group-hover:bg-indigo-100' :
-                                                    'bg-slate-50 group-hover:bg-slate-100'
+                                        activeCategory.color === 'sky' ? 'bg-sky-50 group-hover:bg-sky-100' :
+                                            activeCategory.color === 'indigo' ? 'bg-indigo-50 group-hover:bg-indigo-100' :
+                                                'bg-slate-50 group-hover:bg-slate-100'
                                         }`}>
                                         {service.icon}
                                     </div>
