@@ -26,8 +26,8 @@ const Home: React.FC = () => {
           <ServiceTabs />
 
           <div className="mt-20 text-center">
-            <Link to="/services" className="inline-flex items-center bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-all shadow-sm">
-              Explore All Services & Pricing <ArrowRight className="ml-2 w-5 h-5 text-emerald-600" />
+            <Link to="/pricing" className="inline-flex items-center bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg hover:bg-slate-50 transition-all shadow-sm">
+              Explore Full Price List <ArrowRight className="ml-2 w-5 h-5 text-emerald-600" />
             </Link>
           </div>
         </div>

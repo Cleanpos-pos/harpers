@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Locations from './pages/Locations';
 import BookNow from './pages/BookNow';
 import Services from './pages/Services';
+import Pricing from './pages/Pricing';
 import CookieConsent from './components/CookieConsent';
 import { Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -42,7 +43,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/eco" element={<UnderConstruction title="Sustainability at Harpers" />} />
-            <Route path="/pricing" element={<UnderConstruction title="Pricing Guide" />} />
+            <Route path="/pricing" element={<Pricing />} />
             <Route path="/locations" element={<Locations />} />
             <Route path="/book" element={<BookNow />} />
           </Routes>
